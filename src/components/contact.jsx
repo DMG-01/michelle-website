@@ -8,7 +8,7 @@ function Team()  {
         <>
         <div className="team">
             <div><h3>Welcome</h3></div>
-            <div><p>Expansion Land is a family run land investment company. We purchase land right across the United States. If you need to sell your land, we’re serious about buying it and can offer you a quick, hassle free sale with no out of pocket costs to you.</p></div>
+            <div><p>magboo is a family run land investment company. We purchase land right across the United States. If you need to sell your land, we’re serious about buying it and can offer you a quick, hassle free sale with no out of pocket costs to you.</p></div>
             <div className="teams">
                 <div><h2>MEET THE TEAM</h2><hr></hr></div>
             </div>

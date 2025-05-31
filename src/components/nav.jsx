@@ -22,7 +22,7 @@ function Nav() {
             <div><h1>We Buy Land. Easy,Ethical, Efficient. 
 <hr></hr></h1></div>
             <div><p>No Fees, No Commisions And We Pay All The Closing costs</p></div>
-            <div><button>See Listings</button></div>
+           
         </div>
         </div>
     )
