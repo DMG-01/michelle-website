@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="/michelle-website"> {/* <-- The key change is here! */}
+    <Router> {/* <-- The key change is here! */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} /> 
