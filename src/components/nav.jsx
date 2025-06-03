@@ -21,7 +21,7 @@ function Nav() {
         <div className="oneBody">
             <div><h1>We Buy Land. Easy,Ethical, Efficient. 
 <hr></hr></h1></div>
-            <div><p>No Fees, No Commisions And We Pay All The Closing costs</p></div>
+            <div><p>We carefully select and purchase vacant land for homebuilders, recreation, other investors, or commercial/residential development.</p></div>
            
         </div>
         </div>
