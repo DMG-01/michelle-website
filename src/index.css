@@ -114,15 +114,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 20px;
   margin-top: 50px;
+  
  
 }
+
+ .contactName h2 {
+  text-align: center;
+ }
+
 .className p {
   padding-left:3%;
   margin:0;
+  
 }
 .contact .image {
   margin-bottom: 20px;
@@ -132,6 +139,12 @@ body {
 }
 .contact .image img {
   object-fit: cover;
+}
+
+.secondRow {
+  display : flex;
+  flex-direction:row;
+  justify-content: center;
 }
 
 .faq {
