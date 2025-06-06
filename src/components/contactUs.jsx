@@ -17,9 +17,10 @@ function ContactUs() {
             <div className="contactUsBody">
             <div className="contactInfo">
                 <div><h1>Contact Information</h1></div>
-                <div><p>Say something to start a live chat!</p></div>
+              { /* <div><p>Say something to start a live chat!</p></div>
                 <div><i class="bi bi-telephone-forward"></i></div>
                 <div><p>+101 234 5678</p></div>
+              */}
                 <div><i class="bi bi-envelope-fill"></i></div>
                 <div><p>Michelle@magboo.co</p></div>
                 <div><i class="bi bi-geo-alt-fill"></i></div>
