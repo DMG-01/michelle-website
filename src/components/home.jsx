@@ -13,7 +13,7 @@ function Home() {
        <Nav />
        <Team />
        <FAQ />
-       <Services />
+      {/* <Services />*/}
        <Subscribe />
        <Info />
     </>

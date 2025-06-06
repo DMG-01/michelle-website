@@ -14,7 +14,7 @@ function Team()  {
             </div>
             <div className="ctn">
             <div className="contacts">
-                <Contact imageLink="./faith.jpg" name="Michelle Agboola" content="Managing Director and Client Experience
+                <Contact imageLink="./faith.jpg" name="Michelle Agboola" id="michelleImage"content="Managing Director and Client Experience
 I specialized in Project Management, Contract Negotiations, and Compliance for 10 years prior to purchasing vacant property.
 I help people like yourself that own land to remove the inconvenience paying to upkeep land you don’t plan on using. I actively buy land, collaborate with landowners, title, and other land professionals to create a seamless transition.
 " />
