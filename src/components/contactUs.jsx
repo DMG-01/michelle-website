@@ -1,91 +1,86 @@
-import react from "react"
-import Nav from "./nav"
-import {Link} from "react-router-dom"
-function ContactUs() {
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import emailjs from 'emailjs-com';
 
-    return(
-        
+function ContactUs() {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_6vmargj',               
+            'template_42fzp3f',     
+            form.current,
+            'BS6o3mad70D5hbLoF'                  
+        ).then((result) => {
+            alert("Message sent!");
+            console.log(result.text);
+        }, (error) => {
+            alert("Message failed to send.");
+            console.error(error.text);
+        });
+
+        e.target.reset(); // Clear the form
+    };
+
+    return (
         <div className="contactUs">
             <div className="navigation">
-                <div><h3>magboo</h3></div>
-                <div><Link to="/"><p>HOME</p></Link></div>
+                <h3>magboo</h3>
+                <Link to="/"><p>HOME</p></Link>
             </div>
+
             <div className="header">
-                <div><h2>Contact Us</h2></div>
-                <div><p>Any question or remarks?just write us a message</p></div>
+                <h2>Contact Us</h2>
+                <p>Any question or remarks? Just write us a message</p>
             </div>
+
             <div className="contactUsBody">
-            <div className="contactInfo">
-                <div><h1>Contact Information</h1></div>
-              { /* <div><p>Say something to start a live chat!</p></div>
-                <div><i class="bi bi-telephone-forward"></i></div>
-                <div><p>+101 234 5678</p></div>
-              */}
-                <div><i class="bi bi-envelope-fill"></i></div>
-                <div><p>Michelle@magboo.co</p></div>
-                <div><i class="bi bi-geo-alt-fill"></i></div>
-                <div><p>1942 West Gray St, Suite 202, Houston, TX 77019 | 210-819-5893
-                </p></div>
-            </div>
-            <div className="contactForm">
-                <div className="names">
-                    <div className="firstName">
-                        <label htmlFor="">First Name</label>
-                        <input type="text" placeholder="John"/>
-                    </div>
-                    <div className="lastName">
-                        <div><label htmlFor="">Last Name</label></div>
-                        <div><input type="text" placeholder="Doe" /></div>
-                    </div>
-                </div>
-                
-                <div className="contactInformation">
-                    <div className="email">
-                        <div><label htmlFor="">E-mail</label></div>
-                        <div><input type="text" placeholder="example@gmail.com" /></div>
-                    </div>
-
-                    <div className="phoneNumber">
-                        <div><label htmlFor="">Phone Number</label></div>
-                        <div><input type="text" placeholder="+123 456 7890" /></div>
-                    </div>
+                <div className="contactInfo">
+                    <h1>Contact Information</h1>
+                    <i className="bi bi-envelope-fill"></i>
+                    <p>Michelle@magboo.co</p>
+                    <i className="bi bi-geo-alt-fill"></i>
+                    <p>1942 West Gray St, Suite 202, Houston, TX 77019 | 210-819-5893</p>
                 </div>
 
-                <div className="selectSubject">
-                    <div class="subjectHead">
-                        <div><h3>Select Subject?</h3></div>
+                <form ref={form} onSubmit={sendEmail} className="contactForm">
+                    <div className="names">
+                        <div className="firstName">
+                            <label>Full Name</label>
+                            <input type="text" name="name" required placeholder="John Doe" />
+                        </div>
                     </div>
+
+                    <div className="contactInformation">
+                        <div className="email">
+                            <label>E-mail</label>
+                            <input type="email" name="email" required placeholder="example@gmail.com" />
+                        </div>
+                        <div className="phoneNumber">
+                            <label>Phone Number</label>
+                            <input type="text" name="phone" placeholder="+123 456 7890" />
+                        </div>
+                    </div>
+
                     <div className="selectSubject">
-                        <div className="generalInquiry">
-                            <div><input type="checkbox" /></div>
-                             <div><label htmlFor="">Buy Land</label></div>
-                        </div>
-
-                        <div className="generalInquiry">
-                            <div><input type="checkbox" /></div>
-                             <div><label htmlFor="">Sell Land</label></div>
-                        </div>
-
-                        <div className="generalInquiry">
-                            <div><input type="checkbox" /></div>
-                             <div><label htmlFor="">General Question</label></div>
-                        </div>
+                        <label>Subject</label>
+                        <input type="text" name="title" placeholder="e.g. Buy Land, General Inquiry..." />
                     </div>
-                </div>
 
-                <div className="message">
-                    <div><label htmlFor="">Message</label></div>
-                    <div><input type="" placeholder="Write your message" /></div>
-                </div>
+                    <div className="message">
+                        <label>Message</label>
+                        <textarea class="text_area"name="message" required placeholder="Write your message" />
+                    </div>
 
-                <div className="sendMessage">
-                    <div><button>Send Message</button></div>
-                </div>
-            </div>
-
+                    <div className="sendMessage">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
-    )
+    );
 }
 
-export default ContactUs
+export default ContactUs;
