@@ -363,6 +363,9 @@ hr {
 .contactUs {
   width: 100%;
 }
+.contactInfo p {
+  text-align: center;
+}
 
 .contactUs .navigation {
   padding-left: 3%;
