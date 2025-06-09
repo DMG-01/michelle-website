@@ -14,7 +14,7 @@ function Team()  {
             </div>
             <div className="ctn">
             <div className="contacts">
-                <Contact imageLink="./faith.jpg" name="Michelle Agboola" id="michelleImage"content="Managing Director and Client Experience
+                <Contact imageLink="./michelleWithHeadroom.png" name="Michelle Agboola" id="michelleImage"content="Managing Director and Client Experience
 I specialized in Project Management, Contract Negotiations, and Compliance for 10 years prior to purchasing vacant property.
 I help people like yourself that own land to remove the inconvenience paying to upkeep land you don’t plan on using. I actively buy land, collaborate with landowners, title, and other land professionals to create a seamless transition.
 " />
@@ -23,7 +23,7 @@ Hi, I’m Faith, the Marketing Manager and Contract Assistant here at our real e
 " />
             </div>
 
-            <div className="secondRow"><Contact imageLink="./pup.jpeg" id="jayceeImg" name="JC & Jojo
+            <div className="secondRow"><Contact imageLink="./jayceeAndCo.png" id="jayceeImg" name="JC & Jojo
 “The Closers” & Mascot
 " content="Meet Jaycee and Jojo, our adorable mascots and ultimate cheerleaders! The two are from the same litter and are two years old. With Jaycee’s wagging tail and sweet puppy eyes, she’s known for “closing the deal” by spreading good vibes and winning hearts. Jojo’s playful energy keeps our team motivated and our clients smiling." /></div>
             </div>

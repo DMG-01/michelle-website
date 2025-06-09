@@ -137,13 +137,13 @@ body {
 .contact .image img {
   object-fit: cover;
 }
-#michelleImage .image img {
-  object-position: top;
+
+#michelleImage .image img{
+object-position: 0px 70%;
 }
 
-
 #jayceeImg .image img {
-   object-position: top;
+   object-position: bottom;
 }
 .secondRow {
   display: flex;
