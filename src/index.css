@@ -140,6 +140,11 @@ body {
 #michelleImage .image img {
   object-position: top;
 }
+
+
+#jayceeImg .image img {
+   object-position: top;
+}
 .secondRow {
   display: flex;
   flex-direction: row;

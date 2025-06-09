@@ -23,7 +23,7 @@ Hi, I’m Faith, the Marketing Manager and Contract Assistant here at our real e
 " />
             </div>
 
-            <div className="secondRow"><Contact imageLink="./pup.jpeg" name="JC & Jojo
+            <div className="secondRow"><Contact imageLink="./pup.jpeg" id="jayceeImg" name="JC & Jojo
 “The Closers” & Mascot
 " content="Meet Jaycee and Jojo, our adorable mascots and ultimate cheerleaders! The two are from the same litter and are two years old. With Jaycee’s wagging tail and sweet puppy eyes, she’s known for “closing the deal” by spreading good vibes and winning hearts. Jojo’s playful energy keeps our team motivated and our clients smiling." /></div>
             </div>
