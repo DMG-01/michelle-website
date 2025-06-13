@@ -1,0 +1,9 @@
+# Query: michelle@
+# ContextLines: 1
+
+1 result - 1 file
+
+michelle_website\src\components\contactUs.jsx:
+  23                  <div><i class="bi bi-envelope-fill"></i></div>
+  24:                 <div><p>Mi@magboo.co</p></div>
+  25                  <div><i class="bi bi-geo-alt-fill"></i></div>
