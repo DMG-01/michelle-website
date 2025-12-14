@@ -18,7 +18,7 @@ const Footer = () => {
           
           <div className="flex items-center gap-6">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/magboousa/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center text-background/60 hover:text-background hover:bg-background/20 transition-all duration-300"

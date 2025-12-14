@@ -27,17 +27,19 @@ const CTA = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button variant="hero" size="xl" asChild>
-              <a href="mailto:hello@magbooconsulting.com">
+              <a href="mailto:hello@magbooco">
                 <Mail className="mr-2 h-5 w-5" />
                 Get in Touch
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
+           
+           {/* <Button variant="heroOutline" size="xl" asChild>
               <a href="#" onClick={(e) => { e.preventDefault(); alert('Calendar booking would go here'); }}>
                 <Calendar className="mr-2 h-5 w-5" />
                 Schedule a Call
               </a>
             </Button>
+*/}
           </div>
           
           <p className="text-primary-foreground/60 text-sm">

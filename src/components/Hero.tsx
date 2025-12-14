@@ -20,7 +20,6 @@ const Hero = () => {
         <div className="max-w-3xl">
           {/* Highlight Badge */}
           <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white/90 text-sm mb-6 backdrop-blur-sm">
-            <Sparkles className="h-4 w-4" />
             Insurance Regulatory & Compliance Consulting
           </div>
           
