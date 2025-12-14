@@ -1,615 +1,180 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-body {
-  font-family: "poppins";
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 20%;
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-position: top;
-  padding-top: 15px;
-  position: fixed;
-  background-color: #008080;
-  padding-bottom: 20px;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 20%;
 
-.logo p {
-  font-weight: 900;
-  color: white;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 20%;
 
-.page1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/mainImage1.jpg");
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-}
+    --primary: 215 70% 45%;
+    --primary-foreground: 0 0% 100%;
 
-.navigation {
-  display: flex;
-  flex-direction: row;
-}
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 25% 20%;
 
-.navigation a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
-}
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 45%;
 
-.oneBody {
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-  padding-top: 20%;
-  align-items: center;
-}
+    --accent: 0 75% 55%;
+    --accent-foreground: 0 0% 100%;
 
-.oneBody h1 {
-  font-size: 25px;
-  font-weight: 300;
-  color: white;
-  margin-bottom: 5px;
-}
-.oneBody p {
-  font-weight: 700;
-  font-size: 13px;
-  color: white;
-}
-.oneBody button {
-  height: 40px;
-  width: 150px;
-  margin-top: 30px;
-  background-color: #008080;
-  color: white;
-  border: none;
-}
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
 
-.team h3 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 25px;
-  padding-top: 20px;
-  font-weight: 300;
-}
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 215 70% 45%;
 
-.team p {
-  padding-left: 7%;
-  padding-right: 5%;
-  margin-top: 20px;
-  line-height: 1.5;
-  color: grey;
-  line-height: 1.7;
-}
-.teams h2 {
-  font-size: 25px;
-  margin-top: 20px;
-  padding-left: 3%;
-  padding-top: 30px;
-  font-weight: 200;
-}
+    --radius: 0.75rem;
 
-.image {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-}
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(215 70% 45%) 0%, hsl(215 60% 55%) 50%, hsl(0 70% 55%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(215 30% 40% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(215 30% 40% / 0.12);
+    --shadow-glow: 0 0 40px hsl(215 70% 45% / 0.15);
 
-.image img {
-  width: 90%;
-  border-radius: 50%;
-  height: 90%;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 20px;
-  margin-top: 50px;
-}
-
-.contactName h2 {
-  text-align: center;
-}
-
-.className p {
-  padding-left: 3%;
-  margin: 0;
-}
-.contact .image {
-  margin-bottom: 20px;
-}
-.contactName {
-  margin-bottom: 10px;
-}
-.contact .image img {
-  object-fit: cover;
-}
-
-#michelleImage .image img{
-object-position: 0px 20%;
-}
-
-#jayceeImg .image img {
-   object-position: bottom;
-
-}
-.secondRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.faq {
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-top: 70px;
-  font-weight: 200;
-}
-.faq h2 {
-  font-size: 25px;
-  font-weight: 300;
-  padding-bottom: 30px;
-}
-
-.faqTop {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.faqTop i {
-  font-size: 30px;
-  background-color: none;
-  border: 1px solid white;
-  color: none;
-}
-
-.faqTop h2 {
-  font-weight: 300;
-}
-
-.faqBottom p {
-  font-weight: 300;
-  color: grey;
-}
-.services {
-  padding-left: 3%;
-}
-
-.services h2 {
-  font-size: 32px;
-  padding-bottom: 70px;
-  font-weight: 400;
-}
-
-.services hr {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.service p {
-  color: grey;
-}
-
-.service h2 {
-  font-size: 23px;
-}
-.service .img {
-  width: 90%;
-  padding-left: 5%;
-}
-
-.service .img img {
-  width: 100%;
-}
-
-.imgContent {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.imgContent h2 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 0;
-  padding: 20px;
-}
-
-.imgContent p {
-  width: 95%;
-  text-align: center;
-  margin-bottom: 20px;
-  gap: 70;
-  line-height: 2;
-}
-
-.quaAns {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 80px;
-  transition: height 2s;
-}
-
-.quaAns :hover {
-  color: #008080;
-}
-hr {
-  margin-bottom: 40px;
-}
-.subscribe {
-  margin-left: 3%;
-  margin-right: 3%;
-  display: flex;
-  flex-direction: column;
-}
-.subscribe h2 {
-  font-size: 36px;
-  font-weight: 200;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
-
-.subscribe p {
-  margin-left: 3%;
-  margin-right: 3%;
-  text-align: center;
-  color: grey;
-  line-height: 1.4;
-}
-
-.subscribe input,
-.subscribe button {
-  width: 94%;
-  height: 55px;
-  border: 1px solid black;
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-bottom: 20px;
-}
-
-.subscribe button {
-  font-size: 22px;
-  background-color: #008080;
-  color: white;
-  font-weight: 400;
-  border: none;
-}
-
-.subscribe button a {
-  text-decoration: none;
-  color: white;
-}
-
-.info {
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-.info h1,
-.info h3,
-.info p {
-  text-align: center;
-  margin-bottom: 7px;
-  color: grey;
-}
-
-.info h3 {
-  font-size: 13px;
-  font-weight: 200;
-}
-
-.info button {
-  font-size: 22px;
-  background-color: #008080;
-  color: white;
-  font-weight: 400;
-  border: none;
-  width: 94%;
-  height: 55px;
-  border: none;
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-bottom: 20px;
-}
-.message {
-  display: flex;
-  flex-direction: column;
-}
-.text_area {
-  border: 1px solid #008080;
-  width: 90%;
-  height: 150px;
-}
-.info .bigImage {
-  width: 94%;
-  margin-right: 3%;
-  margin-left: 3%;
-  height: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("image3.jpeg");
-  background-size: cover;
-}
-
-.bigImage h1 {
-  color: white;
-}
-
-.faqHead hr {
-  margin-bottom: 100px;
-  font-weight: 100;
-}
-.contactUs {
-  width: 100%;
-}
-.contactInfo p {
-  text-align: center;
-}
-
-.contactUs .navigation {
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-bottom: 20px;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: black;
-  background-color: #008080;
-}
-.contactUs .navigation Link {
-  color: black;
-}
-.navigation h3 {
-  color: white;
-}
-.contactUs .navigation p {
-  background-color: none;
-}
-.contactUs .header h2,
-.contactUs .header p {
-  text-align: center;
-}
-
-.contactUs .header {
-  margin-bottom: 60px;
-}
-
-.contactInfo {
-  background-color: #008080;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.contactForm {
-  margin-top: 20px;
-  padding-left: 3%;
-  padding-right: 3%;
-}
-
-.firstName,
-.lastName,
-.contactInformation,
-.phoneNumber,
-.email {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.generalInquiry {
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-}
-
-.selectSubject input {
-  margin-right: 15px;
-}
-
-input {
-  width: 90%;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-}
-
-.message {
-  margin-top: 10px;
-}
-
-.sendMessage {
-  width: 100%;
-}
-
-.sendMessage button {
-  width: 47%;
-  height: 50px;
-  background-color: #008080;
-  border: none;
-  color: white;
-  font-size: 19px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-@media (min-width: 1280px) {
-  .nav {
-    height: 100px;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 215 25% 26%;
+    --sidebar-primary: 215 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 96%;
+    --sidebar-accent-foreground: 215 25% 20%;
+    --sidebar-border: 210 20% 91%;
+    --sidebar-ring: 215 70% 45%;
   }
 
-  .oneBody h1 {
-    font-size: 40px;
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
 
-    margin-left: 15%;
-    margin-right: 15%;
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: top;
-    margin-top: 0;
-    align-items: top;
-    justify-content: top;
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 215 70% 60%;
+    --primary-foreground: 215 30% 10%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 0 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 215 70% 60%;
+
+    --sidebar-background: 215 30% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 215 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 16%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 215 25% 18%;
+    --sidebar-ring: 215 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
 
-  .oneBody {
-    padding-top: 150px;
-    margin-bottom: 10px;
-    padding-bottom: 0;
+  html {
+    scroll-behavior: smooth;
   }
 
-  .oneBody hr {
-    margin-bottom: 10px;
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
-  .oneBody p {
-    margin-top: 0;
-    font-size: 18px;
+  .font-sans {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
-  .oneBody button {
-    width: 200px;
-    height: 60px;
-    font-size: 17px;
-    font-weight: 700;
-  }
-  .nav {
-    padding-bottom: 0;
-    margin-top: 0;
-
-    text-align: top;
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
   }
 
-  .nav p {
-    font-size: 30px;
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
   }
 
-  .team p {
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    font-size: 20px;
+  .bg-soft-gradient {
+    background: var(--gradient-soft);
   }
 
-  .teams hr {
-    margin-left: 3%;
-    margin-right: 3%;
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
   }
 
-  .contacts {
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    justify-content: center;
+  .shadow-card {
+    box-shadow: var(--shadow-card);
   }
 
-  .ctn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer components {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
   }
 
-  .contact {
-    align-items: left;
-    width: 50%;
-    text-align: none;
-    max-height: 1800px;
+  .animate-fade-up-delay-1 {
+    animation: fadeUp 0.6s ease-out 0.1s forwards;
+    opacity: 0;
   }
 
-  .faqBody {
-    margin-left: 15%;
-    margin-right: 15%;
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.6s ease-out 0.2s forwards;
+    opacity: 0;
   }
 
-  .quaAns {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
+  .animate-fade-up-delay-3 {
+    animation: fadeUp 0.6s ease-out 0.3s forwards;
+    opacity: 0;
   }
 
-  .faqBottom {
-    font-size: 21px;
+  .animate-fade-up-delay-4 {
+    animation: fadeUp 0.6s ease-out 0.4s forwards;
+    opacity: 0;
   }
+}
 
-  .service {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  .service .img img {
-    width: 500px;
-  }
-
-  .service h2 {
-    font-size: 33px;
-  }
-
-  .subscribe h2 {
-    font-size: 39px;
-  }
-
-  .subscribe p {
-    margin-left: 25%;
-    margin-right: 25%;
-    font-size: 21px;
-  }
-
-  .subscribe input {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    margin-top: 20px;
-  }
-
-  .subscribe button,
-  .info button {
-    margin-left: 40%;
-    margin-right: 40%;
-    width: 20%;
-  }
-
-  .contactUsBody {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .contactInfo {
-    width: 50%;
-  }
-
-  .contactForm {
-    width: 50%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
