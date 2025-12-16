@@ -35,7 +35,7 @@ const CTA = () => {
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
         <Button variant="hero" size="xl" asChild>
-          <a href="mailto:hello@magbooco">
+          <a href="mailto:hello@magboo.co">
             <Mail className="mr-2 h-5 w-5" />
             Get in Touch
           </a>
