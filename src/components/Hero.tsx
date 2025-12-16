@@ -1,40 +1,58 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden
+                 bg-gradient-to-br from-white via-[#FFF8E7] to-[#F5D78B]"
+    >
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary-foreground/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
+      <div className="absolute top-20 right-10 w-72 h-72 bg-[#E6C56A]/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#D4AF37]/15 rounded-full blur-3xl" />
+
       {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
-          backgroundSize: '32px 32px'
-        }} />
+      <div className="absolute inset-0 opacity-[0.025]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+          }}
+        />
       </div>
-      
+
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="max-w-3xl">
           {/* Highlight Badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white/90 text-sm mb-6 backdrop-blur-sm">
+          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2
+                          bg-white/70 border border-[#E6C56A]/40
+                          rounded-full text-[#8A6A1F] text-sm mb-6 backdrop-blur-sm">
             Insurance Regulatory & Compliance Consulting
           </div>
-          
+
           {/* Main Heading */}
-          <h1 className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 tracking-wide">
+          <h1
+            className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl
+                       text-[#5C4A1A] leading-tight mb-6 tracking-wide"
+          >
             Bring Structure to Complexity.<br />
-            <span className="italic">Move Critical Work Forward.</span>
+            <span className="italic text-[#8A6A1F]">
+              Move Critical Work Forward.
+            </span>
           </h1>
-          
+
           {/* Description */}
-          <p className="animate-fade-up-delay-2 text-white/80 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl font-light">
-            Expert guidance for SERFF filings, regulatory compliance, and operational excellence. 
+          <p
+            className="animate-fade-up-delay-2 text-[#6B5A2A]
+                       text-lg md:text-xl mb-10 leading-relaxed
+                       max-w-2xl font-light"
+          >
+            Expert guidance for SERFF filings, regulatory compliance, and operational excellence.
             I help insurance organizations navigate complexity with clarity and confidence.
           </p>
-          
+
           {/* Action Buttons */}
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4 mb-12">
             <Button variant="hero" size="xl" asChild>
@@ -43,23 +61,24 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
+
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#services">View Services</a>
             </Button>
           </div>
-          
+
           {/* Features */}
-          <div className="animate-fade-up-delay-4 flex flex-wrap gap-6 text-white/70 text-sm">
+          <div className="animate-fade-up-delay-4 flex flex-wrap gap-6 text-[#8A6A1F]/80 text-sm">
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
               PMP Certified
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
               Fortune 100 Experience
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
               State & Carrier Perspective
             </span>
           </div>
