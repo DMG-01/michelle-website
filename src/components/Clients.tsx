@@ -20,16 +20,29 @@ const Clients = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-muted-foreground text-lg">
-            I partner with organizations across the insurance value chain who need 
+            I partner with organizations across the insurance value chain who need
             expert guidance to navigate regulatory complexity.
           </p>
         </div>
-        
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+
+        {/* Mobile = grid | Desktop = flex (unchanged) */}
+        <div
+          className="
+            grid grid-cols-2 gap-4
+            md:flex md:flex-wrap md:justify-center
+            max-w-4xl mx-auto
+          "
+        >
           {clientTypes.map((client, index) => (
-            <div 
+            <div
               key={index}
-              className="flex items-center gap-3 px-6 py-4 bg-card rounded-full border border-border/50 shadow-soft hover:shadow-card hover:border-primary/20 transition-all duration-500 hover:-translate-y-0.5"
+              className="
+                flex items-center gap-3 px-6 py-4
+                bg-card rounded-full
+                border border-border/50 shadow-soft
+                hover:shadow-card hover:border-primary/20
+                transition-all duration-500 hover:-translate-y-0.5
+              "
             >
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                 <client.icon className="h-4 w-4 text-primary" />
