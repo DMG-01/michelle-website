@@ -9,7 +9,7 @@ const Header = () => {
   className="flex flex-col leading-tight text-foreground tracking-wide font-['cursive']"
 >
   <span className="text-3xl font-semibold">Magboo</span>
-  <span className="text-base font-medium opacity-80">Consulting</span>
+  <span className="text-2xl font-semibold opacity-80">Consulting</span>
 </a>
 
 

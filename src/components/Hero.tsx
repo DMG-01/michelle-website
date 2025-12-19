@@ -39,9 +39,9 @@ const Hero = () => {
             className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl
                        text-[#5C4A1A] leading-tight mb-6 tracking-wide"
           >
-            Providing strategic details.<br />
+            Bring Structure to Complexity.<br />
             <span className="italic text-[#8A6A1F]">
-              between idea and execution.
+              Move Critical Work Forward.
             </span>
           </h1>
 
